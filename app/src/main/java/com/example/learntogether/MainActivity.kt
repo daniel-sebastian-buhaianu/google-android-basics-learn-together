@@ -9,6 +9,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.learntogether.ui.theme.LearnTogetherTheme
 
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    // main function call
                 }
             }
         }
@@ -30,14 +31,14 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun Title(titleName: String) {
+    Text(text = "$titleName")
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun TitlePreview() {
     LearnTogetherTheme {
-        Greeting("Android")
+        Title(stringResource(R.string.app_title))
     }
 }
